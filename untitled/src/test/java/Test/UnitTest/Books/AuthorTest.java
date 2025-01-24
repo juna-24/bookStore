@@ -12,15 +12,15 @@ class AuthorTest {
 
     @Test
     void getFirstName() {
-        Author author = new Author("Greisi");
-        assertEquals("Greisi", author.getFirstName());
+        Author author = new Author("Sara");
+        assertEquals("Sara", author.getFirstName());
         assertNotNull(author.getFirstName());
     }
 
     @Test
     void setFirstName() {
-        Author author = new Author("Greisi");
-        author.setFirstName("Era");
+        Author author = new Author("Sara");
+        author.setFirstName("Juna");
         String actual = author.getFirstName();
         assertEquals("Era",actual );
     }
