@@ -17,26 +17,26 @@ public class prova {
     @Test
     void testWriteAndReadUser() {
         // Create three users
-        Users userErisa = new Users();
-        userErisa.setFirstName("Erisa");
-        userErisa.setPassword("999");
-        userErisa.setAccesLevel(AccessLevel.ADMINISTRATOR);
+        Users userNidia = new Users();
+        userNidia.setFirstName("Nidia");
+        userNidia.setPassword("999");
+        userNidia.setAccesLevel(AccessLevel.ADMINISTRATOR);
 
-        Users userDavid = new Users();
-        userDavid.setFirstName("David");
-        userDavid.setPassword("111");
-        userDavid.setAccesLevel(AccessLevel.LIBRARIAN);
+        Users userSara= new Users();
+        userSara.setFirstName("Sara");
+        userSara.setPassword("111");
+        userSara.setAccesLevel(AccessLevel.LIBRARIAN);
 
-        Users userGreisi = new Users();
-        userGreisi.setFirstName("Greisi");
-        userGreisi.setPassword("222");
-        userGreisi.setAccesLevel(AccessLevel.MANAGER);
+        Users userJuna = new Users();
+        userJuna.setFirstName("Juna");
+        userJuna.setPassword("222");
+        userJuna.setAccesLevel(AccessLevel.MANAGER);
 
         // Write users to file
         try (ObjectOutputStream objout = new ObjectOutputStream(new FileOutputStream("src/main/java/com/example/EncodedInformation/Users.dat", true))) {
-            objout.writeObject(userErisa);
-            objout.writeObject(userDavid);
-            objout.writeObject(userGreisi);
+            objout.writeObject(userNidia);
+            objout.writeObject(userSara);
+            objout.writeObject(userJuna);
         } catch (IOException e) {
             e.printStackTrace();  // Handle the exception according to your needs
         }
