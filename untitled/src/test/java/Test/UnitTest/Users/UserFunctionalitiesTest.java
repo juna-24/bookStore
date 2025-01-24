@@ -19,11 +19,11 @@ public class UserFunctionalitiesTest {
         Users user1 = new Users();
         Users user2 = new Users();
 
-        user1.setEmail("greisijaho@gmail.com");
-        user1.setFirstName("Greisi");
+        user1.setEmail("nidiafino@gmail.com");
+        user1.setFirstName("Nidia");
 
-        user2.setEmail("DavidKeci@gmail.com");
-        user2.setFirstName("David");
+        user2.setEmail("junadako@gmail.com");
+        user2.setFirstName("Juna");
 
 
         usersListt.add(user1);
@@ -37,8 +37,8 @@ public class UserFunctionalitiesTest {
         UserFunctionalities userFunctionalities = new UserFunctionalities(userServiceMock);
 
         Users user = new Users();
-        user.setEmail("greisijaho@gmail.com");
-        user.setFirstName("Greisi2");
+        user.setEmail("nidiafino@gmail.com");
+        user.setFirstName("Nidia");
 
         ArrayList<Users> updatedUser =   UserFunctionalities.updateUsers(user);
         assertEquals(updatedUser.get(0).getFirstName(),user.getFirstName() );
