@@ -100,27 +100,27 @@ public class StatisticsTest {
 
 
     Map<String, Double> expected = new HashMap<>();
-    expected.put("Greisi Jaho", 50.0);
-    expected.put("David Keci", 58.0);
-    expected.put("Greisi Jaho", 103.0);
+    expected.put("Juna Dako", 50.0);
+    expected.put("Nidia Fino", 58.0);
+    expected.put("Juna Dako", 103.0);
 
 
     ArrayList<Bill> bills = new ArrayList<>();
 
     Bill bill = new Bill();
-    bill.setLibrarian_Name("Greisi");
-    bill.setSurname("Jaho");
+    bill.setLibrarian_Name("Juna");
+    bill.setSurname("Dako");
     bill.setPrice(50);
 
     Bill bill2 = new Bill();
-    bill2.setLibrarian_Name("Greisi");
-    bill2.setSurname("Jaho");
+    bill2.setLibrarian_Name("Juna");
+    bill2.setSurname("Dako");
     bill2.setPrice(53);
 
 
     Bill bill1 = new Bill();
-    bill1.setLibrarian_Name("David");
-    bill1.setSurname("Keci");
+    bill1.setLibrarian_Name("Nidia");
+    bill1.setSurname("Fino");
     bill1.setPrice(58);
 
     bills.add(bill);
