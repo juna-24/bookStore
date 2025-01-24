@@ -15,13 +15,13 @@ class UsersTest {
         MyDate birthday = new MyDate(2002, 13, 11);
 
         // Creating a D_Users object
-        Users user = new Users("Greisi", "Jaho",
-                "Gr_ja.@example.com", birthday, "password",
+        Users user = new Users("Sara", "Onjea",
+                "Sara_O.@example.com", birthday, "password",
                 50000, "123-456-7890", AccessLevel.ADMINISTRATOR);
 
-        assertEquals("Greisi", user.getFirstName());
-        assertEquals("Jaho", user.getLastName());
-        assertEquals("Gr_ja.@example.com", user.getEmail());
+        assertEquals("Sara", user.getFirstName());
+        assertEquals("Onjea", user.getLastName());
+        assertEquals("Sara_O.@example.com", user.getEmail());
         assertEquals(birthday, user.getBirthday());
         assertEquals("password", user.getPassword());
         assertEquals(50000, user.getSalery());
@@ -32,22 +32,22 @@ class UsersTest {
     @Test
     public void getFirstName() {
         MyDate birthday = new MyDate(2002, 13, 11);
-        Users user = new Users("Greisi", "Jaho",
-                "Gr_ja.@example.com", birthday, "password",
+        Users user = new Users("Sara", "Onjea",
+                "Sara_O.@example.com", birthday, "password",
                 50000, "123-456-7890", AccessLevel.ADMINISTRATOR);
         String firstName = user.getFirstName();
         assertTrue(firstName instanceof String);
-        assertEquals("Greisi", user.getFirstName());
+        assertEquals("Sara", user.getFirstName());
     }
 
     @Test
     void setFirstName() {
         Users user = new Users();
-        user.setFirstName("Greisi");
-        assertEquals("Greisi", user.getFirstName());
+        user.setFirstName("Sara");
+        assertEquals("Sara", user.getFirstName());
         String firstName = user.getFirstName();
         assertTrue(firstName instanceof String);
-        assertEquals("Greisi", user.getFirstName());
+        assertEquals("Sara", user.getFirstName());
         assertNotNull(user.getFirstName());
     }
 
@@ -56,23 +56,23 @@ class UsersTest {
     @Test
     void getEmail() {
         MyDate birthday = new MyDate(2002, 13, 11);
-        Users user = new Users("Greisi", "Jaho",
-                "Gr_ja.@example.com", birthday, "password",
+        Users user = new Users("Sara", "Onjea",
+                "Sara_O.@example.com", birthday, "password",
                 50000, "123-456-7890", AccessLevel.ADMINISTRATOR);
         String email = user.getEmail();
         assertTrue(email instanceof String);
-        assertEquals("Gr_ja.@example.com", user.getEmail());
+        assertEquals("Sara_O.@example.com", user.getEmail());
         assertNotNull(user.getEmail());
     }
 
     @Test
     void setEmail() {
         Users user = new Users();
-        user.setEmail("Gr_ja.@example.com");
-        assertEquals("Gr_ja.@example.com", user.getEmail());
+        user.setEmail("Sara_O.@example.com");
+        assertEquals("Sara_O.@example.com", user.getEmail());
         String email = user.getEmail();
         assertTrue(email instanceof String);
-        assertEquals("Gr_ja.@example.com", user.getEmail());
+        assertEquals("Sara_O.@example.com", user.getEmail());
         assertNotNull(user.getEmail());
     }
 
@@ -80,8 +80,8 @@ class UsersTest {
     @Test
     void getPassword() {
         MyDate birthday = new MyDate(2002, 13, 11);
-        Users user = new Users("Greisi", "Jaho",
-                "Gr_ja.@example.com", birthday, "password",
+        Users user = new Users("Sara", "Onjea",
+                "Sara_O.@example.com", birthday, "password",
                 50000, "123-456-7890", AccessLevel.ADMINISTRATOR);
         String password = user.getPassword();
         assertTrue(password instanceof String);
@@ -104,8 +104,8 @@ class UsersTest {
     @Test
     void getSalary() {
         MyDate birthday = new MyDate(2002, 13, 11);
-        Users user = new Users("Greisi", "Jaho",
-                "Gr_ja.@example.com", birthday, "password",
+        Users user = new Users("Sara", "Onjea",
+                "Sara_O.@example.com", birthday, "password",
                 50000, "123-456-7890", AccessLevel.ADMINISTRATOR);
         long salary = user.getSalery();
         assertEquals(50000, salary);
@@ -125,8 +125,8 @@ class UsersTest {
     @Test
     void getAccessLevel() {
         MyDate birthday = new MyDate(2002, 13, 11);
-        Users user = new Users("Greisi", "Jaho",
-                "Gr_ja.@example.com", birthday, "password",
+        Users user = new Users("Sara", "Onjea",
+                "Sara_O.@example.com", birthday, "password",
                 50000, "123-456-7890", AccessLevel.ADMINISTRATOR);
         AccessLevel accessLevel = user.getAccesLevel();
         assertEquals(AccessLevel.ADMINISTRATOR, accessLevel);
@@ -145,30 +145,30 @@ class UsersTest {
     @Test
     void getLastName() {
         MyDate birthday = new MyDate(2002, 13, 11);
-        Users user = new Users("Greisi", "Jaho",
-                "Gr_ja.@example.com", birthday, "password",
+        Users user = new Users("Sara", "Onjea",
+                "Sara_O.@example.com", birthday, "password",
                 50000, "123-456-7890", AccessLevel.ADMINISTRATOR);
         String lastName = user.getLastName();
         assertTrue(lastName instanceof String);
-        assertEquals("Jaho", lastName);
+        assertEquals("Onjea", lastName);
         assertNotNull(user.getLastName());
     }
 
     @Test
     void setLastName() {
         Users user = new Users();
-        user.setLastName("Smith");
-        assertEquals("Smith", user.getLastName());
+        user.setLastName("Dako");
+        assertEquals("Dako", user.getLastName());
         String lastName = user.getLastName();
         assertTrue(lastName instanceof String);
-        assertEquals("Smith", lastName);
+        assertEquals("Dako", lastName);
     }
 
     @Test
     void getPhone() {
         MyDate birthday = new MyDate(2002, 13, 11);
-        Users user = new Users("Greisi", "Jaho",
-                "Gr_ja.@example.com", birthday, "password",
+        Users user = new Users("Sara", "Onjea",
+                "Sara_O.@example.com", birthday, "password",
                 50000, "123-456-7890", AccessLevel.ADMINISTRATOR);
         String phone = user.getPhone();
         assertTrue(phone instanceof String);
