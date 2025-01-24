@@ -39,7 +39,7 @@ public class CheckUsersFxText extends ApplicationTest {
 
 
         WaitForAsyncUtils.waitFor(4, TimeUnit.SECONDS, () -> !lookup("#Submit").queryAll().isEmpty());
-        clickOn(loginView.getUsernametextFiled()).write("Erisa");
+        clickOn(loginView.getUsernametextFiled()).write("Nidia");
         clickOn(loginView.getPassswrdField()).write("999");
         clickOn("#Submit");
         WaitForAsyncUtils.waitForFxEvents();
