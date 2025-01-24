@@ -36,7 +36,7 @@ public class CheckBooksLessThan5 extends ApplicationTest {
 
 
         WaitForAsyncUtils.waitFor(4, TimeUnit.SECONDS, () -> !lookup("#Submit").queryAll().isEmpty());
-        clickOn(loginView.getUsernametextFiled()).write("Greisi");
+        clickOn(loginView.getUsernametextFiled()).write("Juna");
         clickOn(loginView.getPassswrdField()).write("222");
         clickOn("#Submit");
         WaitForAsyncUtils.waitForFxEvents();
