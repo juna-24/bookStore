@@ -48,9 +48,9 @@ public class CreateUserFxTest extends ApplicationTest {
         WaitForAsyncUtils.waitFor(4, TimeUnit.SECONDS, () -> !lookup("#signup").queryAll().isEmpty());
         clickOn("#signup");
         WaitForAsyncUtils.waitForFxEvents();
-        clickOn("#firstname").write("Era");
-        clickOn("#lastname").write("Mulla");
-        clickOn("#email").write("emulla21@epoka.edu.al");
+        clickOn("#firstname").write("Nidia");
+        clickOn("#lastname").write("Fino");
+        clickOn("#email").write("nfino22@epoka.edu.al");
         WaitForAsyncUtils.waitFor(4, TimeUnit.SECONDS, () -> !lookup("#datapicker").queryAll().isEmpty());
         DatePicker datePicker = lookup("#datapicker").query();
         LocalDate dateToSet = LocalDate.of(2024, Month.JANUARY, 15);
