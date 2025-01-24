@@ -36,8 +36,8 @@ class LoginTest {
     }
     @ParameterizedTest
     @CsvSource({
-            "David,111",
-            "Greisi,222"
+            "Nidia,111",
+            "Juna,222"
     })
     void testValidCredentials(String username, String password) throws IOException {
         lg = new LogInFunctionalities();
@@ -51,9 +51,9 @@ class LoginTest {
     @ParameterizedTest
     @CsvSource({
             "Prava1, Prova1",
-            "David, 11",
-            "Greisi, 111",
-            "Erisa, 222",
+            "Sara, 11",
+            "Juna, 111",
+            "Nidia, 222",
             "'',''"
     })
     void testInvalidArguments(String username, String password) throws IOException {
@@ -80,32 +80,32 @@ class LoginTest {
                 .thenReturn(librarianUser);
 
         LogInFunctionalities   logInFunctionalities = new LogInFunctionalities(lg);
-        List<Constable> result = logInFunctionalities.handleLogin("Davidii", "111",  "lol");
-        assertEquals(Arrays.asList(ResultType.LIBRARIAN_LOGIN, "Davidii"), result);
+        List<Constable> result = logInFunctionalities.handleLogin("Saraaa", "111",  "lol");
+        assertEquals(Arrays.asList(ResultType.LIBRARIAN_LOGIN, "Saraaa"), result);
     }
 
     @Test
     public void testValidManagerLogin() throws IOException {
         lg = Mockito.mock(LogInFunctionalities.class);
-        Users librarianUser = new Users("Davidii", "111", AccessLevel.MANAGER);
-        Mockito.when(lg.checkUser("Davidii", "111", "lol"))
+        Users librarianUser = new Users("Saraaa", "111", AccessLevel.MANAGER);
+        Mockito.when(lg.checkUser("Saraaa", "111", "lol"))
                 .thenReturn(librarianUser);
 
         LogInFunctionalities   logInFunctionalities = new LogInFunctionalities(lg);
-        List<Constable> result = logInFunctionalities.handleLogin("Davidii", "111",  "lol");
-        assertEquals(Arrays.asList(ResultType.MANAGER_LOGIN, "Davidii"), result);
+        List<Constable> result = logInFunctionalities.handleLogin("Saraaa", "111",  "lol");
+        assertEquals(Arrays.asList(ResultType.MANAGER_LOGIN, "Saraaa"), result);
     }
 
     @Test
     public void testValidAdministratorLogin() throws IOException {
         lg = Mockito.mock(LogInFunctionalities.class);
-        Users librarianUser = new Users("Davidii", "111", AccessLevel.ADMINISTRATOR);
-        Mockito.when(lg.checkUser("Davidii", "111", "lol"))
+        Users librarianUser = new Users("Saraaa", "111", AccessLevel.ADMINISTRATOR);
+        Mockito.when(lg.checkUser("Saraaa", "111", "lol"))
                 .thenReturn(librarianUser);
 
         LogInFunctionalities   logInFunctionalities = new LogInFunctionalities(lg);
-        List<Constable> result = logInFunctionalities.handleLogin("Davidii", "111",  "lol");
-        assertEquals(Arrays.asList(ResultType.ADMIN_LOGIN, "Davidii"), result);
+        List<Constable> result = logInFunctionalities.handleLogin("Saraaa", "111",  "lol");
+        assertEquals(Arrays.asList(ResultType.ADMIN_LOGIN, "Saraaa"), result);
     }
 
     @Test
@@ -122,7 +122,7 @@ class LoginTest {
     @Test
     public void testIncorrectPassword() throws IOException {
         lg = Mockito.mock(LogInFunctionalities.class);
-        Mockito.when(lg.checkUser("David", "InvalidPassword", "lol"))
+        Mockito.when(lg.checkUser("Sara", "InvalidPassword", "lol"))
                 .thenReturn(null);
 
         LogInFunctionalities logInFunctionalities = new LogInFunctionalities(lg);
@@ -140,7 +140,7 @@ class LoginTest {
                 .thenThrow(new IOException());
 
         LogInFunctionalities logInFunctionalities = new LogInFunctionalities(lg);
-        List<Constable> result = logInFunctionalities.handleLogin("Davidii", "111", "lol");
+        List<Constable> result = logInFunctionalities.handleLogin("Saraaa", "111", "lol");
         assertEquals(Arrays.asList(ResultType.TRY_AGAIN, ""), result);
     }
 
