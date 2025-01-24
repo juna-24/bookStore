@@ -38,11 +38,11 @@ public class UserfunctionalitiesIntegrationTest {
         Users user1 = new Users();
         Users user2 = new Users();
 
-        user1.setEmail("greisijaho@gmail.com");
-        user1.setFirstName("Greisi");
+        user1.setEmail("junadako@gmail.com");
+        user1.setFirstName("Juna");
 
-        user2.setEmail("DavidKeci@gmail.com");
-        user2.setFirstName("David");
+        user2.setEmail("saraonjea@gmail.com");
+        user2.setFirstName("Sara");
 
 
         usersListt.add(user1);
@@ -54,8 +54,8 @@ public class UserfunctionalitiesIntegrationTest {
         UserFunctionalities userFunctionalities = new UserFunctionalities(userService);
 
         Users user3 = new Users();
-        user3.setEmail("greisijaho@gmail.com");
-        user3.setFirstName("Oho");
+        user3.setEmail("nidiafino@gmail.com");
+        user3.setFirstName("Nidia");
 
         userFunctionalities.setPath(tempFile.getPath());
         UserFunctionalities.updateUsers(user3);
