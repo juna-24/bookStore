@@ -27,28 +27,28 @@ class AuthorTest {
 
     @Test
     void getLastName() {
-        Author author = new Author("Greisi", "Jaho", Gender.Female);
-        assertEquals("Jaho", author.getLastName());
+        Author author = new Author("Nidia", "Fino", Gender.Female);
+        assertEquals("Fino", author.getLastName());
         assertNotNull( author.getLastName());
     }
 
     @Test
     void setLastName() {
-        Author author = new Author("Greisi", "Jaho", Gender.Female);
-        author.setLastName("Jaho");
-        assertEquals("Jaho", author.getLastName());
+        Author author = new Author("Nidia", "Fino", Gender.Female);
+        author.setLastName("Fino");
+        assertEquals("Fino", author.getLastName());
     }
 
     @Test
     void getGender() {
-        Author author = new Author("Greisi", "Jaho", Gender.Female);
+        Author author = new Author("Nidia", "Fino", Gender.Female);
         assertEquals(Gender.Female, author.getGender());
         assertNotNull( author.getGender());
     }
 
     @Test
     void setGender() {
-        Author author = new Author("Greisi", "Jaho", Gender.Female);
+        Author author = new Author("Nidia", "Fino", Gender.Female);
         author.setGender(Gender.Female);
         assertEquals(Gender.Female, author.getGender());
     }
