@@ -44,7 +44,7 @@ public class ClearFXTest extends ApplicationTest {
 
         WaitForAsyncUtils.waitFor(4, TimeUnit.SECONDS, () -> !lookup("#Submit").queryAll().isEmpty());
 
-        clickOn(loginView.getUsernametextFiled()).write("David");
+        clickOn(loginView.getUsernametextFiled()).write("Sara");
         clickOn(loginView.getPassswrdField()).write("111");
 
         clickOn("#Submit");
